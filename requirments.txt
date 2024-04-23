@@ -1,0 +1,42 @@
+Practice Day 2
+Marks : 10
+Take screenshots of your projects Table page and form pages and store it in a doc file.
+Create a “Musicians Directory” project where
+
+A musician model will have
+First Name
+Last Name
+Email
+Phone number
+Instrument Type
+
+Album model will have 
+Album Name
+One-to-Many Relationships with musician model
+Album release date
+Rating between 1-5
+
+	Now you need to use model form so that anyone can create a musician and album, edit data, delete data, save data to backend and can see the data in the below format
+
+
+ID
+Musician Name
+Email
+Album Rating
+Instrument Type
+Album Name
+Release Date
+Actions
+
+1
+Rahim Uddin
+rahim@gmail.com
+5
+Guitar
+Preyotoma
+06-Dec-2023
+Edit  Delete
+
+Instructions : 
+While clicking edit button anyone can edit the album data
+While clicking name of the musician anyone can edit musician data

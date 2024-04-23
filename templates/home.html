@@ -1,0 +1,38 @@
+<!-- @format -->
+
+{% extends "base.html" %} {% block content %}
+<section class="px-2">
+  <h1>All Album Page</h1>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Musician Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Album Rating</th>
+        <th scope="col">Instrument Type</th>
+        <th scope="col">Album Name</th>
+        <th scope="col">Release Date</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for album in albums %}
+      <tr>
+        <th scope="row">{{album.id}}</th>
+        <td><a href="{% url "edit_musician" album.musician.id %}">{{album.musician.first_name}} {{album.musician.last_name}}</a></td>
+        <td>{{album.musician.email}}</td>
+        <td>{{album.rating}}</td>
+        <td>{{album.musician.instrument_type}}</td>
+        <td class="text-wrap ">{{album.name}}</td>
+        <td>{{album.release_date}}</td>
+        <td>
+          <a href="{% url "edit_album" album.id %}" class="btn btn-primary btn-sm">Edit</a>
+          <a href="{% url "delete_album" album.id %}" class="btn btn-warning btn-sm">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}
